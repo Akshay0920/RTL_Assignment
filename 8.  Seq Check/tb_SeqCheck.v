@@ -30,7 +30,7 @@ module tb_SeqCheck;
         #20;
         rst_n  = 1'b1;
         
-        // Test 1: Generate 3 edges within 5 cycles
+        //  Generate 3 edges within 5 cycles
         @(posedge clk); sig_in = 1'b1; // Edge 1
         @(posedge clk); sig_in = 1'b0;
         @(posedge clk); sig_in = 1'b1; // Edge 2
@@ -39,7 +39,7 @@ module tb_SeqCheck;
         @(posedge clk); sig_in = 1'b0;
         #40;
 
-        // Test 2: Edges are too far apart
+        //  Edges are too far apart
         @(posedge clk); sig_in = 1'b1; // Edge 1
         @(posedge clk); sig_in = 1'b0;
         #30; // Wait 3 cycles
