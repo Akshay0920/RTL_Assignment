@@ -31,14 +31,14 @@ module tb_PulseTracer;
         rst_n = 1'b1;
         #10;
 
-        // Test 1: Perfect one-cycle pulse
+        // Perfect one-cycle pulse
         @(posedge clk);
         noisy_in = 1'b1;
         @(posedge clk);
         noisy_in = 1'b0;
         #20;
 
-        // Test 2: Two-cycle pulse (should be ignored)
+        // Two-cycle pulse (should be ignored)
         @(posedge clk);
         noisy_in = 1'b1;
         @(posedge clk);
