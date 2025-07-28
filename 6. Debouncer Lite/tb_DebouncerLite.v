@@ -30,7 +30,7 @@ module tb_DebouncerLite;
         #20;
         rst_n = 1'b1;
         
-        // Test 1: Bouncing signal on press
+        // Bouncing signal on press
         #10; noisy_in = 1'b1; // First contact
         #10; noisy_in = 1'b0; // Bounce
         #10; noisy_in = 1'b1; // Bounce
@@ -40,7 +40,7 @@ module tb_DebouncerLite;
         // Wait long enough for the output to go high
         #100;
 
-        // Test 2: Bouncing signal on release
+        // Bouncing signal on release
         noisy_in = 1'b0; // First release
         #10; noisy_in = 1'b1; // Bounce
         #10; noisy_in = 1'b0; // Stable low
