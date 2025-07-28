@@ -29,15 +29,15 @@ module tb_LightChaser;
         #20;
         rst_n  = 1'b1;
         
-        // Test 1: Enable the rotation
+        // Enable the rotation
         enable = 1'b1;
         #80; // Run for 8 rotations (8 * 4 cycles = 32 cycles total)
 
-        // Test 2: Disable the rotation
+        //  Disable the rotation
         enable = 1'b0;
         #40; // Pattern should freeze
 
-        // Test 3: Re-enable the rotation
+        // Re-enable the rotation
         enable = 1'b1;
         #40; // Pattern should resume rotating
 
